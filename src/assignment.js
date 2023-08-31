@@ -14,13 +14,20 @@ const assignment = {};
  * @param {Number} destination is the stopping number
  * @returns number the sum of the numbers from 1 to destination
  */
-function sumOfNumbersTo(destination) {
-    let sum = 0;
-    return sum
+function SumOfNumbersTo(destination)
+{if (destination<1){throw new Error("Destination must be greater than 1");}
+let sum = 0;
+for (let b=1; b<=destination;b++){
+    sum += b;
 }
+return sum;
+}console.log(SumOfNumbersTo ())
 
 
-// assignment.sumOfNumbersTo = sumOfNumbersTo;
+
+
+
+assignment.sumOfNumbersTo = sumOfNumbersTo;
 
 /**
  * Challenge - 2
@@ -33,23 +40,32 @@ function sumOfNumbersTo(destination) {
  * @returns the object containing count, sum, arrayOfEvenNumbers from 1 to destination
  */
 function countEvenNumbersWithin(destination) {
-    // Write your code here
-    // get the number from 1 to destination
-    let sum = 0;
-    let count = 0;
-    let arrayOfEvenNumbers = [];
-
-    return {
-        // property value shorthand
-        // when the property name and the value name are the same
-        // you can just write the property name in your object
-        count,
-        sum,
-        arrayOfEvenNumbers
-    };
-}
-
-// assignment.countEvenNumbersWithin = countEvenNumbersWithin;
+    for (let x = 1; x <= destination; i++) {
+      if (x % 2 === 0) {
+        count++;
+        sum += x;
+        arrayOfEvenNumbers.push(x);
+      }
+  }
+  
+      // get the number from 1 to destination
+      let sum = 0;
+      let count = 0;
+      let arrayOfEvenNumbers = [];
+  
+      return {
+          // property value shorthand
+          // when the property name and the value name are the same
+          // you can just write the property name in your object
+          count,
+          sum,
+          arrayOfEvenNumbers
+      };
+  }
+  console.log(countEvenNumbersWithin(5))
+  
+  assignment.countEvenNumbersWithin = countEvenNumbersWithin;
+  
 
 /**
  * Challenge - 3
